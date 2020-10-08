@@ -1,0 +1,8 @@
+{
+	"**.{js,jsx,ts,tsx}": [
+		"npm run format --staged",
+		"npm run lint:ts --fix",
+		"npm run lint:css",
+		"git add"
+	]
+}

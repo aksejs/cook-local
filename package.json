@@ -1,0 +1,119 @@
+{
+  "name": "spotify-sync",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "effector": "^20.6.1",
+    "effector-react": "^20.4.1",
+    "preact": "^10.1.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-transition-group": "^4.3.0",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "@size-limit/preset-app": "^2.2.3",
+    "@types/classnames": "^2.2.9",
+    "@types/jest": "24.0.22",
+    "@types/node": "12.12.7",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.4",
+    "@types/react-transition-group": "^4.2.2",
+    "@types/styled-components": "^4.4.0",
+    "@types/webpack-env": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-app-rewired": "^2.1.5",
+    "react-scripts": "^3.3.0-next.39",
+    "source-map-explorer": "^2.1.1",
+    "stylelint": "^11.1.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^3.1.1",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "typescript": "3.7.2",
+    "typescript-plugin-css-modules": "^2.0.2"
+  },
+  "size-limit": [
+    {
+      "limit": "3.4s",
+      "path": "build/static"
+    }
+  ],
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "format": "pretty-quick",
+    "prettier": "prettier --write '**/*.{ts,tsx,json,js,jsx}'",
+    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:css": "stylelint 'src/**.{ts,tsx}'",
+    "lint": "concurrently 'yarn lint:ts' 'yarn lint:css'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "prettier",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".tsx"
+          ]
+        }
+      ],
+      "react/prop-types": 0,
+      "no-underscore-dangle": 0,
+      "import/imports-first": [
+        "error",
+        "absolute-first"
+      ],
+      "import/newline-after-import": "error"
+    },
+    "globals": {
+      "window": true,
+      "document": true,
+      "localStorage": true,
+      "FormData": true,
+      "FileReader": true,
+      "Blob": true,
+      "navigator": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "overrides": [
+      {
+        "files": [
+          "./*.js"
+        ],
+        "rules": {
+          "react-hooks/rules-of-hooks": "off"
+        }
+      }
+    ]
+  }
+}
